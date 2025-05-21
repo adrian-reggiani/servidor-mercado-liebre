@@ -3,6 +3,8 @@ import path from 'path'
 export const getContentType = (filePath) => {
   const extname = path.extname(filePath)
   switch (extname) {
+    case '.html':
+      return 'text/html'
     case '.js':
       return 'text/javascript'
     case '.css':
@@ -12,7 +14,7 @@ export const getContentType = (filePath) => {
     case '.png':
       return 'image/png'
     case '.jpg':
-      return 'image/jpeg'
+      return 'image/jpg'
     case '.jpeg':
       return 'image/jpeg'
     case '.svg':
